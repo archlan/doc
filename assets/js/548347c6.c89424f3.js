@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkarchlan_docs=self.webpackChunkarchlan_docs||[]).push([[388],{931:function(e){e.exports=JSON.parse('{"title":"Latest News","items":[{"title":"Title","permalink":"/documentation/news/01-slug"}]}')}}]);

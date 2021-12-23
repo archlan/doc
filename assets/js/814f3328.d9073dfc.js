@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkarchlan_docs=self.webpackChunkarchlan_docs||[]).push([[535],{5641:function(t){t.exports=JSON.parse('{"title":"Recent Posts","items":[{"title":"Title 1","permalink":"/documentation/blog/01-post-title"},{"title":"Title 2","permalink":"/documentation/blog/02-post-title"}]}')}}]);
