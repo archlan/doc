@@ -8,12 +8,20 @@
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <item>
-            <title><![CDATA[Title 1]]></title>
-            <link>https://archlan.github.io/documentation/blog/01-post-title</link>
-            <guid>01-post-title</guid>
+            <title><![CDATA[Fix an issue with ArchLan packages repository signing]]></title>
+            <link>https://archlan.github.io/documentation/blog/01-post-packages</link>
+            <guid>01-post-packages</guid>
             <pubDate>Wed, 22 Dec 2021 21:40:41 GMT</pubDate>
-            <description><![CDATA[Preview of the whole post.]]></description>
-            <content:encoded><![CDATA[<p>Preview of the whole post.</p><p>Actual post content</p>]]></content:encoded>
+            <description><![CDATA[ArchLan Linux has it's own package repository added to the pacman configuration.]]></description>
+            <content:encoded><![CDATA[<p>ArchLan Linux has it&#x27;s own package repository added to the pacman configuration.
+If, at some point, you encounter this error while trying to update;</p><pre><code class="language-bash">error: archlan-packages: signature from &quot;Lanhild (ArchLan Linux PGP key, made by @Lanhild.) &lt;archlan@protonmail.com&gt;&quot; is unknown trust
+error: failed to synchronize all databases (invalid or corrupted database (PGP signature))
+</code></pre><p>Follow the steps in this post to fix it.</p><ol><li>The first step is to import the ArchLan Linux gpg key from the keyserver to your machine:</li></ol><pre><code class="language-bash">$ sudo pacman-key --recv-keys 5F765E0E531F5B53
+</code></pre><ol start="2"><li>By precaution, verify the fingerprint of the key:</li></ol><pre><code class="language-bash">$ sudo pacman-key --finger 5F765E0E531F5B53
+</code></pre><ol start="3"><li>The last step is to locally sign the key:</li></ol><pre><code class="language-bash">$ sudo pacman-key --lsign-key 5F765E0E531F5B53
+</code></pre><p>:::note
+Once all these steps have been accomplished, you should be able to successfully update and install packages from the ArchLan repository.
+:::</p>]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Title 2]]></title>

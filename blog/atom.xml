@@ -8,12 +8,20 @@
     <subtitle>ArchLan Linux Blog</subtitle>
     <icon>https://archlan.github.io/documentation/img/favicon.ico</icon>
     <entry>
-        <title type="html"><![CDATA[Title 1]]></title>
-        <id>01-post-title</id>
-        <link href="https://archlan.github.io/documentation/blog/01-post-title"/>
+        <title type="html"><![CDATA[Fix an issue with ArchLan packages repository signing]]></title>
+        <id>01-post-packages</id>
+        <link href="https://archlan.github.io/documentation/blog/01-post-packages"/>
         <updated>2021-12-22T21:40:41.388Z</updated>
-        <summary type="html"><![CDATA[Preview of the whole post.]]></summary>
-        <content type="html"><![CDATA[<p>Preview of the whole post.</p><p>Actual post content</p>]]></content>
+        <summary type="html"><![CDATA[ArchLan Linux has it's own package repository added to the pacman configuration.]]></summary>
+        <content type="html"><![CDATA[<p>ArchLan Linux has it&#x27;s own package repository added to the pacman configuration.
+If, at some point, you encounter this error while trying to update;</p><pre><code class="language-bash">error: archlan-packages: signature from &quot;Lanhild (ArchLan Linux PGP key, made by @Lanhild.) &lt;archlan@protonmail.com&gt;&quot; is unknown trust
+error: failed to synchronize all databases (invalid or corrupted database (PGP signature))
+</code></pre><p>Follow the steps in this post to fix it.</p><ol><li>The first step is to import the ArchLan Linux gpg key from the keyserver to your machine:</li></ol><pre><code class="language-bash">$ sudo pacman-key --recv-keys 5F765E0E531F5B53
+</code></pre><ol start="2"><li>By precaution, verify the fingerprint of the key:</li></ol><pre><code class="language-bash">$ sudo pacman-key --finger 5F765E0E531F5B53
+</code></pre><ol start="3"><li>The last step is to locally sign the key:</li></ol><pre><code class="language-bash">$ sudo pacman-key --lsign-key 5F765E0E531F5B53
+</code></pre><p>:::note
+Once all these steps have been accomplished, you should be able to successfully update and install packages from the ArchLan repository.
+:::</p>]]></content>
         <author>
             <name>Lanhild</name>
             <uri>https://github.com/Lanhild</uri>

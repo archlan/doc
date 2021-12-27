@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkarchlan_docs=self.webpackChunkarchlan_docs||[]).push([[535],{5641:function(t){t.exports=JSON.parse('{"title":"Recent Posts","items":[{"title":"Fix an issue with ArchLan packages repository signing","permalink":"/documentation/blog/01-post-packages"},{"title":"Title 2","permalink":"/documentation/blog/02-post-title"}]}')}}]);
