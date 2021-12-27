@@ -27,16 +27,4 @@ Once all these steps have been accomplished, you should be able to successfully 
             <uri>https://github.com/Lanhild</uri>
         </author>
     </entry>
-    <entry>
-        <title type="html"><![CDATA[Title 2]]></title>
-        <id>02-post-title</id>
-        <link href="https://archlan.github.io/documentation/blog/02-post-title"/>
-        <updated>2021-12-22T21:38:14.100Z</updated>
-        <summary type="html"><![CDATA[Preview of the whole post.]]></summary>
-        <content type="html"><![CDATA[<p>Preview of the whole post.</p><p>Actual post content</p>]]></content>
-        <author>
-            <name>Lanhild</name>
-            <uri>https://github.com/Lanhild</uri>
-        </author>
-    </entry>
 </feed>
