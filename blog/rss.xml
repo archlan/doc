@@ -4,9 +4,23 @@
         <title>ArchLan Linux Blog</title>
         <link>https://archlan.github.io/documentation/blog</link>
         <description>ArchLan Linux Blog</description>
-        <lastBuildDate>Wed, 22 Dec 2021 21:40:41 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 05 Jan 2022 22:00:27 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[Start systemd services that weren't automatically enabled]]></title>
+            <link>https://archlan.github.io/documentation/blog/02-post-systemd</link>
+            <guid>02-post-systemd</guid>
+            <pubDate>Wed, 05 Jan 2022 22:00:27 GMT</pubDate>
+            <description><![CDATA[During the ArchLan ISO building, the file runbeforesquashfs.sh executes operations in the last steps of the ISO building process.]]></description>
+            <content:encoded><![CDATA[<p>During the ArchLan ISO building, the file <code>run_before_squashfs.sh</code> executes operations in the last steps of the ISO building process.
+Some of these operations might not succesfully work. If you encounter issues, follow the steps in this post to solve them.</p><pre><code class="language-bash">$ nmcli
+Error: NetworkManager is not running.
+</code></pre><p>Follow the steps in this post to fix it.</p><ol><li>In order to get the NetworkManager service unit to work</li></ol><pre><code class="language-bash">$ sudo systemctl start NetworkManager.service
+</code></pre><p>You should now be able to use network connection on your machine.</p><p>:::note
+In the case you are facing any other problems related to the ArchLan ISO, submit an issue at <a href="https://github.com/archlan/iso/issues/new">ArchLan:Issues</a>
+:::</p>]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[Fix an issue with ArchLan packages repository signing]]></title>
             <link>https://archlan.github.io/documentation/blog/01-post-packages</link>

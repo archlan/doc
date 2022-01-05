@@ -4,16 +4,24 @@
         <title>ArchLan Linux Blog</title>
         <link>https://archlan.github.io/documentation/news</link>
         <description>ArchLan Linux Blog</description>
-        <lastBuildDate>Wed, 22 Dec 2021 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 05 Jan 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <item>
-            <title><![CDATA[Title]]></title>
-            <link>https://archlan.github.io/documentation/news/01-slug</link>
-            <guid>01-slug</guid>
-            <pubDate>Wed, 22 Dec 2021 00:00:00 GMT</pubDate>
+            <title><![CDATA[The first beta release of ArchLan is now out!]]></title>
+            <link>https://archlan.github.io/documentation/news/01-beta-release</link>
+            <guid>01-beta-release</guid>
+            <pubDate>Wed, 05 Jan 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[<span]]></description>
-            <content:encoded><![CDATA[<p>Content</p>]]></content:encoded>
+            <content:encoded><![CDATA[<p>The first release of ArchLan is now out!
+To check it out or install it on your machine, head to <a href="https://archlan.github.io/install.html">ArchLan:Download</a>.</p><p><strong>Make sure to know that this release <div>does not</div> have a GUI installer yet</strong></p><p>Read this post for more information about this release:</p><p>:::note
+Keep in mind that this release is a <strong>beta</strong> and I am actively developing <div>ArchLan</div>, which means that you might encounter bugs or unexpected errors while using it.
+The next versions of ArchLan will be even better and I will make sure to
+listen to users suggestion in order to make ArchLan better!
+:::</p><h2>Release notes:</h2><p><strong><code>January 2022 (First Release)</code></strong></p><ul><li>Created from the <code>releng</code> archiso profile, to keep it minimalist</li><li>Basic i3-gaps and i3blocks config, as I am reworking the ArchLan package repository</li><li>Branding official wallpapers and window manager configs</li><li>ArchLan lightdm configuration</li><li>My own zsh configuration</li><li>More...</li></ul><blockquote><p>This beta release provides a perfectly usable environment aimed at any type of user. The next versions will be improved over time.</p></blockquote><h2>Latest release:</h2><ul><li><strong><code>ISO</code></strong>: <a href="https://github.com/archlan/releases/download/v22.01/archlan-2022.01.05-x86_64.iso">archlan-2022.01.05-x86_64.iso</a></li><li><strong><code>SIG</code></strong>: <a href="https://github.com/archlan/releases/download/v22.01/archlan-2022.01.05-x86_64.iso.sig">archlan-2022.01.05-x86_64.iso.sig</a></li><li><strong><code>SHA</code></strong>: <a href="https://github.com/archlan/releases/download/v22.01/archlan-2022.01.05-x86_64.iso.sha256sum">archlan-2022.01.05-x86_64.iso.sha256sum</a> - <code>0e3ab75c9a85c9cd3d44d690e3e6cc797892d28190d53f2e42887ffaac195200</code></li></ul><h2>Verify the authenticity of the ISO</h2><ul><li>Download the <div><code>ISO</code></div>, <div><code>GPG signature</code></div> and the <div><code>sha256sum</code></div> files</li><li>Ensure that all the files you have downloaded are present in the same directory as the ISO</li><li>Verify the key on the keyserver:</li></ul><pre><code class="language-bash">$ gpg --recv-keys 5F765E0E531F5B53
+</code></pre><ul><li>Verify the iso signature:</li></ul><pre><code class="language-bash">$ gpg --verify archlan-2022.01.05-x86_64.iso.sig
+</code></pre><ul><li>Then verify the <code>sha256sum</code>:</li></ul><pre><code class="language-bash">$ sha256sum -c archlan-2022.01.05-x86_64.iso.sha256sum
+</code></pre>]]></content:encoded>
         </item>
     </channel>
 </rss>

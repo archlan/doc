@@ -2,11 +2,29 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://archlan.github.io/documentation/blog</id>
     <title>ArchLan Linux Blog</title>
-    <updated>2021-12-22T21:40:41.388Z</updated>
+    <updated>2022-01-05T22:00:27.437Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://archlan.github.io/documentation/blog"/>
     <subtitle>ArchLan Linux Blog</subtitle>
     <icon>https://archlan.github.io/documentation/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Start systemd services that weren't automatically enabled]]></title>
+        <id>02-post-systemd</id>
+        <link href="https://archlan.github.io/documentation/blog/02-post-systemd"/>
+        <updated>2022-01-05T22:00:27.437Z</updated>
+        <summary type="html"><![CDATA[During the ArchLan ISO building, the file runbeforesquashfs.sh executes operations in the last steps of the ISO building process.]]></summary>
+        <content type="html"><![CDATA[<p>During the ArchLan ISO building, the file <code>run_before_squashfs.sh</code> executes operations in the last steps of the ISO building process.
+Some of these operations might not succesfully work. If you encounter issues, follow the steps in this post to solve them.</p><pre><code class="language-bash">$ nmcli
+Error: NetworkManager is not running.
+</code></pre><p>Follow the steps in this post to fix it.</p><ol><li>In order to get the NetworkManager service unit to work</li></ol><pre><code class="language-bash">$ sudo systemctl start NetworkManager.service
+</code></pre><p>You should now be able to use network connection on your machine.</p><p>:::note
+In the case you are facing any other problems related to the ArchLan ISO, submit an issue at <a href="https://github.com/archlan/iso/issues/new">ArchLan:Issues</a>
+:::</p>]]></content>
+        <author>
+            <name>Lanhild</name>
+            <uri>https://github.com/Lanhild</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Fix an issue with ArchLan packages repository signing]]></title>
         <id>01-post-packages</id>
