@@ -4,9 +4,19 @@
         <title>ArchLan Linux Blog</title>
         <link>https://archlan.github.io/documentation/blog</link>
         <description>ArchLan Linux Blog</description>
-        <lastBuildDate>Wed, 05 Jan 2022 22:00:27 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 09 Jan 2022 22:17:08 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[Lightdm doesn't start on the live ISO]]></title>
+            <link>https://archlan.github.io/documentation/blog/03-post-lightdm-iso</link>
+            <guid>03-post-lightdm-iso</guid>
+            <pubDate>Sun, 09 Jan 2022 22:17:08 GMT</pubDate>
+            <description><![CDATA[When booting in the ArchLan live environment, it is possible that the lightdm display manager didn't start automatically. If it's your case, just run this command:]]></description>
+            <content:encoded><![CDATA[<p>When booting in the ArchLan live environment, it is possible that the lightdm display manager didn&#x27;t start automatically. If it&#x27;s your case, just run this command:</p><pre><code class="language-bash"># The password for the liveuser is &quot;archlan&quot;
+$ sudo systemctl start lightdm.service
+</code></pre><blockquote><p>This issue will be fixed in the next releases.</p></blockquote>]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[Start systemd services that weren't automatically enabled]]></title>
             <link>https://archlan.github.io/documentation/blog/02-post-systemd</link>

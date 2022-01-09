@@ -2,11 +2,25 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://archlan.github.io/documentation/blog</id>
     <title>ArchLan Linux Blog</title>
-    <updated>2022-01-05T22:00:27.437Z</updated>
+    <updated>2022-01-09T22:17:08.400Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://archlan.github.io/documentation/blog"/>
     <subtitle>ArchLan Linux Blog</subtitle>
     <icon>https://archlan.github.io/documentation/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Lightdm doesn't start on the live ISO]]></title>
+        <id>03-post-lightdm-iso</id>
+        <link href="https://archlan.github.io/documentation/blog/03-post-lightdm-iso"/>
+        <updated>2022-01-09T22:17:08.400Z</updated>
+        <summary type="html"><![CDATA[When booting in the ArchLan live environment, it is possible that the lightdm display manager didn't start automatically. If it's your case, just run this command:]]></summary>
+        <content type="html"><![CDATA[<p>When booting in the ArchLan live environment, it is possible that the lightdm display manager didn&#x27;t start automatically. If it&#x27;s your case, just run this command:</p><pre><code class="language-bash"># The password for the liveuser is &quot;archlan&quot;
+$ sudo systemctl start lightdm.service
+</code></pre><blockquote><p>This issue will be fixed in the next releases.</p></blockquote>]]></content>
+        <author>
+            <name>Lanhild</name>
+            <uri>https://github.com/Lanhild</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Start systemd services that weren't automatically enabled]]></title>
         <id>02-post-systemd</id>

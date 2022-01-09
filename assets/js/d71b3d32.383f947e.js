@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkarchlan_docs=self.webpackChunkarchlan_docs||[]).push([[105],{3185:function(a){a.exports=JSON.parse('{"allTagsPath":"/documentation/blog/tags","slug":"/documentation/blog/tags/iso","name":"iso","count":1,"permalink":"/documentation/blog/tags/iso"}')}}]);
