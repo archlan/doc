@@ -2,11 +2,31 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://archlan.github.io/documentation/news</id>
     <title>ArchLan Linux Blog</title>
-    <updated>2022-01-05T00:00:00.000Z</updated>
+    <updated>2022-01-17T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://archlan.github.io/documentation/news"/>
     <subtitle>ArchLan Linux Blog</subtitle>
     <icon>https://archlan.github.io/documentation/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[An improved beta v0.2 is now out!]]></title>
+        <id>02-beta-release</id>
+        <link href="https://archlan.github.io/documentation/news/02-beta-release"/>
+        <updated>2022-01-17T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<span]]></summary>
+        <content type="html"><![CDATA[<p>Newer and better!
+To check it out or install it on your machine, head to <a href="https://archlan.github.io/install.html">ArchLan:Download</a>.</p><p>Even though there is still place for improvement, this release is much better and much more usable.</p><p>Read this post for more information about this release:</p><p>:::note
+Keep in mind that this release is a <strong>beta</strong> and I am actively developing <div>ArchLan</div>, which means that you might encounter bugs or unexpected errors while using it.
+The next versions of ArchLan will be even better and I will make sure to
+listen to users suggestion in order to make ArchLan better!
+:::</p><h2>Release notes:</h2><p><strong><code>January 2022 (Second Release)</code></strong></p><ul><li>Reworked the file structure of a few components</li><li>Currently remaking the i3 config</li><li>Branding official wallpapers and window manager configs</li><li>ArchLan lightdm configuration</li><li>My own zsh configuration - Undergoing maintenance</li><li>More...</li></ul><blockquote><p>This beta release provides a perfectly usable environment aimed at any type of user. The next versions will be improved over time.</p></blockquote><h2>Latest release:</h2><ul><li><strong><code>ISO</code></strong>: <a href="https://github.com/archlan/releases/download/v22.01/archlan-2022.01.16-x86_64.iso">archlan-2022.01.16-x86_64.iso</a></li><li><strong><code>SIG</code></strong>: <a href="https://github.com/archlan/releases/download/v22.01/archlan-2022.01.16-x86_64.iso.sig">archlan-2022.01.16-x86_64.iso.sig</a></li><li><strong><code>SHA</code></strong>: <a href="https://github.com/archlan/releases/download/v22.01/archlan-2022.01.16-x86_64.iso.sha256sum">archlan-2022.01.16-x86_64.iso.sha256sum</a></li></ul><h2>Verify the authenticity of the ISO</h2><ul><li>Download the <div><code>ISO</code></div>, <div><code>GPG signature</code></div> and the <div><code>sha256sum</code></div> files</li><li>Ensure that all the files you have downloaded are present in the same directory as the ISO</li><li>Verify the key on the keyserver:</li></ul><pre><code class="language-bash">$ gpg --recv-keys 5F765E0E531F5B53
+</code></pre><ul><li>Verify the iso signature:</li></ul><pre><code class="language-bash">$ gpg --verify archlan-2022.01.16-x86_64.iso.sig
+</code></pre><ul><li>Then verify the <code>sha256sum</code>:</li></ul><pre><code class="language-bash">$ sha256sum -c archlan-2022.01.16-x86_64.iso.sha256sum
+</code></pre>]]></content>
+        <author>
+            <name>Lanhild</name>
+            <uri>https://github.com/Lanhild</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[The first beta release of ArchLan is now out!]]></title>
         <id>01-beta-release</id>
