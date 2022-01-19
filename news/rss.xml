@@ -4,9 +4,18 @@
         <title>ArchLan Linux Blog</title>
         <link>https://archlan.github.io/documentation/news</link>
         <description>ArchLan Linux Blog</description>
-        <lastBuildDate>Mon, 17 Jan 2022 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 19 Jan 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[ArchLan official discord server is open!]]></title>
+            <link>https://archlan.github.io/documentation/news/03-discord-open</link>
+            <guid>03-discord-open</guid>
+            <pubDate>Wed, 19 Jan 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[<span]]></description>
+            <content:encoded><![CDATA[<p>The ArchLan official discord server is now open!</p><p>Discuss about issues, share your thoughts and configurations of your ArchLan machine.
+Announcements will be made here.</p><p>Join the <a href="https://discord.com/invite/5XBTCeBvvN">server right here!</a></p>]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[An improved beta v0.2 is now out!]]></title>
             <link>https://archlan.github.io/documentation/news/02-beta-release</link>

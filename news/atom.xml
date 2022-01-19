@@ -2,11 +2,24 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://archlan.github.io/documentation/news</id>
     <title>ArchLan Linux Blog</title>
-    <updated>2022-01-17T00:00:00.000Z</updated>
+    <updated>2022-01-19T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://archlan.github.io/documentation/news"/>
     <subtitle>ArchLan Linux Blog</subtitle>
     <icon>https://archlan.github.io/documentation/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[ArchLan official discord server is open!]]></title>
+        <id>03-discord-open</id>
+        <link href="https://archlan.github.io/documentation/news/03-discord-open"/>
+        <updated>2022-01-19T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<span]]></summary>
+        <content type="html"><![CDATA[<p>The ArchLan official discord server is now open!</p><p>Discuss about issues, share your thoughts and configurations of your ArchLan machine.
+Announcements will be made here.</p><p>Join the <a href="https://discord.com/invite/5XBTCeBvvN">server right here!</a></p>]]></content>
+        <author>
+            <name>Lanhild</name>
+            <uri>https://github.com/Lanhild</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[An improved beta v0.2 is now out!]]></title>
         <id>02-beta-release</id>

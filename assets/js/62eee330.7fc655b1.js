@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkarchlan_docs=self.webpackChunkarchlan_docs||[]).push([[2248],{369:function(e){e.exports=JSON.parse('{"permalink":"/documentation/news","page":1,"postsPerPage":10,"totalPages":1,"totalCount":2,"previousPage":null,"nextPage":null,"blogDescription":"Blog","blogTitle":"News"}')}}]);
