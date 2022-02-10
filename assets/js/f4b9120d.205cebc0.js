@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkarchlan_docs=self.webpackChunkarchlan_docs||[]).push([[1898],{3561:function(e){e.exports=JSON.parse('{"allTagsPath":"/documentation/news/tags","slug":"/documentation/news/tags/release","name":"release","count":2,"permalink":"/documentation/news/tags/release"}')}}]);

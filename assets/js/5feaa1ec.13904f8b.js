@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkarchlan_docs=self.webpackChunkarchlan_docs||[]).push([[3504],{119:function(s){s.exports=JSON.parse('{"allTagsPath":"/documentation/news/tags","slug":"/documentation/news/tags/discord","name":"discord","count":1,"permalink":"/documentation/news/tags/discord"}')}}]);
