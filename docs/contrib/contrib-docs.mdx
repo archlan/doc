@@ -1,0 +1,41 @@
+---
+sidebar_position: 3
+---
+
+# Improve the Documentation
+>This section regroups the guidelines that should be followed to add elements to the ArchLan Linux documentation.
+
+## Prerequisites
+- To work locally, [setup](./setup-env) a local development environment on your machine.
+- Ensure to have basic understandings of the [Markdown](https://www.markdownguide.org/cheat-sheet) and [MDX](https://mdxjs.com/) syntaxes. See [Docusaurus Markdown Features](https://docusaurus.io/docs/markdown-features) for further information.
+- Make sure that you have the ability to _fork, clone_ a repository and create a _pull request_.
+
+
+## Files structure and base format
+
+The **docs** directory contains subdirectories (each subdirectory is a section) that regroup the `.md` and `.mdx` files for all of the wiki posts. The `_category_.json` file is used for ordering the docs categories.
+
+- `_category_.json` file detemines the label and position of each categories on the side menu.
+- Example using the `Contribute` section of the documentation.
+
+```bash
+docs    # Main Directory
+└── contrib                           # Category
+   ├── _category_.json                # Label and category position
+   ├── contrib-blog.mdx               # Documentation Page
+   ├── contrib-docs.mdx               # Documentation Page
+   └── setup-env.mdx                  # Documentation Page
+```
+
+## Heading format
+
+In the `heading`, you have to specify the position of the category.
+
+```
+---
+sidebar_position: 1
+hide_table_of_contents: true
+---
+```
+
+>For further details, go to [Docusaurus:Blog](https://docusaurus.io/docs/docs-introduction)

@@ -1,0 +1,95 @@
+---
+sidebar_position: 1
+---
+
+<!-- Tabs -->
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<!-- Badges -->
+export const Highlight = ({children, color}) => (
+  <span
+    style={{
+      backgroundColor: color,
+      borderRadius: '4px',
+      color: '#fff',
+      padding: '0 0.2rem 0 0.2rem',
+    }}>
+    {children}
+  </span>
+);
+
+:::note
+If you wish to only install **ArchLan i3wm configuration** on your machine but not ArchLan, follow [these steps](#standalone-setup)
+:::
+
+
+## Keybinds
+> The following table lists all the keybindings for the i3wm ArchLan configuration.
+>
+> The `Mod` key here is referred as `$kyoto`, to make configuration modifications easier.
+
+| Keybinds                  | Function                |
+| -----------------------   | ----------------------- |
+| Super Key                 | Mod (modifier key)      |
+| `$kyoto` + L              | Lock the screen         |
+| `$kyoto` + Return         | Open $term              |
+| `$kyoto`                  | Open launcher           |
+| `$kyoto` + 1 2 3 4 5      | Switch workspace        |
+| `$kyoto` + R              | Toggle resize mode      |
+| `$kyoto` + W / Alt + F4   | Kill window             |
+| `$kyoto` + C              | Open wallpaper menu     |
+| `$kyoto` + D              | Open runner             |
+| `$kyoto` + F              | Toggle fullscreen       |
+| `$kyoto` + ← ↑ ↓ →        | Move focus to window    |
+| `$kyoto` + Shift + 1...   | Switch client workspace |
+| `$kyoto` + Shift + R      | Restart i3              |
+|  Ctrl + Mod1 + Tab        | Flameshot screenshot    |
+| `$kyoto` + Shift + ← ↑ ↓ →| Move focused window     |
+| ← ↑ ↓ → (while resize)    | Resize window           |
+
+
+## Standalone setup 
+
+1. [Prerequisites](#requirements)
+1. [ArchLan Package](#archlan-i3-installation)
+
+## Requirements
+> This configuration needs some software to be installed before it is used;
+
+**List of dependencies**
+* [alacritty](https://github.com/alacritty/alacritty)
+* [flameshot](https://github.com/flameshot-org/flameshot)
+* [i3-gaps](https://github.com/Airblader/i3)
+* [i3lock-color](https://github.com/Raymo111/i3lock-color)
+* [picom-ibhagwan](https://github.com/ibhagwan/picom)
+* [polybar](https://github.com/polybar/polybar)
+* [pywal](https://github.com/dylanaraps/pywal)
+* [rofi](https://github.com/davatorium/rofi)
+* [Victor Mono Font](https://rubjo.github.io/victor-mono/)
+
+## ArchLan i3 Installation
+
+To simply install the ArchLan i3wm configuration packages, simply follow these steps:
+
+- Install the dependencies if you prefer to do it manually, or **skip this step** and let the package install it's dependencies automatically.
+
+```bash
+# Arch-based
+$ yay -S alacritty flameshot i3-gaps i3lock-color picom-ibhagwan-git polybar pywal rofi font-victor-mono
+```
+
+- Clone the package repository on your machine.
+
+```bash
+$ git clone https://github.com/archlan/archlan-i3
+```
+
+- Change into the cloned repository and execute the following command to install the package.
+
+```bash
+# Arch-based
+$ sudo makepkg -si
+```
+
+A reboot might be needed, but you should now be able to use ArchLan Linux i3wm configuration on your machine.

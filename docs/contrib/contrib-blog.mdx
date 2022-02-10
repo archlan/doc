@@ -1,0 +1,62 @@
+---
+sidebar_position: 2
+---
+
+# Add Tutorials
+>This section regroups the guidelines that should be followed to write a tutorial for the ArchLan Linux documentation.
+
+## Prerequisites
+- To work locally, [setup](./setup-env) a local development environment on your machine.
+- Ensure to have basic understandings of the [Markdown](https://www.markdownguide.org/cheat-sheet) and [MDX](https://mdxjs.com/) syntaxes. See [Docusaurus Markdown Features](https://docusaurus.io/docs/markdown-features) for further information.
+- Make sure that you have the ability to _fork, clone_ a repository and create a _pull request_.
+
+## Format structure and file organization
+
+All the `.md` and `.mdx` files for tutorials are contained within the blog directory.
+
+- Simply create a new file with the appropriate format to add a tutorial to the wiki.
+
+```bash
+YEAR    # Directory
+├── month-day-post-NAME.mdx     # .md or .mdx file
+└── month-day                   # Directory
+   ├── Images                   # Directory
+   └── post-NAME.mdx            # .md or .mdx file
+```
+
+## Create tags and titles
+
+Add the correct slug, tags and title in the heading of the file you want to add.
+
+```yml
+---
+slug: NUM-post-NAME
+title: TITLE
+authors: ID
+tags: [TAG1, TAG2, TAG3]
+---
+```
+
+## Add yourself as an author
+
+Add your ID in the heading of the file you want to add alolng with the required details.
+
+In `authors.yml`
+
+```yml
+...
+ID:
+  name: USERNAME
+  title: OCCUPATION/WHO_ARE_YOU
+  url: https://github.com/USERNAME
+  image_url: https://github.com/USERNAME.png
+...
+```
+```yml {3}
+slug: NUM-post-NAME
+title: TITLE
+authors: ID
+tags: [TAG1, TAG2, TAG3]
+```
+
+>For further details, go to [Docusaurus:Blog](https://docusaurus.io/docs/blog)

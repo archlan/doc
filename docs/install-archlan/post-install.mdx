@@ -1,0 +1,72 @@
+---
+sidebar_position: 3
+---
+
+# Post Installation
+>This section regroups what I recommend you do after installing ArchLan on your machine
+
+:::note
+Don't forget that some tasks are automatically done by the [ArchLan hooks](https://github.com/archlan/core/tree/main/archlan-hooks) right
+after the installation, which means that some of the things recommended to do
+are already done.
+:::
+
+## Update ArchLan
+Refresh the package database and update it.
+```bash
+$ sudo pacman -Syyu
+```
+
+If you get such an error
+```bash
+error: archlan-packages: signature from "Lanhild (ArchLan Linux PGP key, made by @Lanhild.) <archlan@protonmail.com>" is unknown trust
+error: failed to synchronize all databases (invalid or corrupted database (PGP signature))
+```
+Follow [these instructions](https://archlan.github.io/documentation/blog/01-post-packages) in order the fix it.
+
+## Remove unnecessary dependencies
+It is possible that once you have installed ArchLan on your machine, there are
+unnecessary dependencies left. In order to remove them, do this:
+```bash
+# This will remove the orphaned packages (or unnecessary depends) installed on the system.
+$ sudo pacman -Rs $(pacman -Qdtq)
+```
+
+## Install your favorite applications
+```bash
+$ sudo pacman -S package-name
+```
+
+## Graphics issue
+
+In the case you encounter screen tearing, try to do this:
+
+1. Enable the `GLX` backend for the compositor.
+>Edit `~/.config/i3/picom.conf` and put `glx` as the rendering backend
+
+2. In the case the first option didn't work, create an `xorg.conf` failed
+```bash
+# Go to the X11 config dir
+$ cd /etc/X11/xorg.conf.d
+
+# Create the config file and edit it
+$ sudo vim 20-amdgpu.conf
+```
+
+Then paste this section into the file`
+```bash
+Section "Device"
+    Identifier "AMD"
+    Driver "amdgpu"
+    Option "TearFree" "true"
+EndSection
+```
+:::info
+This method might not work either. It may prevent you from booting into **xorg**.
+Make sure you are able to use a **tty** or that you know how to boot into **recovery mode**
+to revert the changes and fix the issue.
+:::
+
+## Summary
+This is pretty much all you have to do right after installing ArchLan. I will 
+most certainly modify or add sections to this category progressively.

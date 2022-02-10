@@ -1,0 +1,34 @@
+---
+sidebar_position: 3
+---
+
+# Prepare a new release
+>This section lists everything that I must take in consideration
+>when preparing a new ArchLan release.
+
+## Test the Live ISO
+Before continuing to the next steps, make sure to test thoroughly the built ISO
+and ensure that there are no unwanted errors or bugs.
+
+>Once tested, push the updates to [archlan/iso](https://github.com/archlan/iso)
+
+## Create the release
+- GPG sign the ISO file
+```bash
+$ gpg --default-key archlan@protonmail.com --output archlan-*-x86_64.iso --detach-sig archlan-*-x86_64.iso
+```
+- Create the sha256sum file
+```bash
+$ sudo sha256sum archlan-*-x86_64.iso > archlan-*-x86_64.iso.sha256sum
+```
+
+## Upload the files to the git repo
+The last step is to create the actual Github release.
+
+- Upload the `sha256sum` and `*.sig` ISO files. The rest should be automatically done by Github.
+
+:::note
+>Note to self
+
+Make sure to update the links in the [website](https://archlan.github.io) so that they redirect to the latest release.
+:::

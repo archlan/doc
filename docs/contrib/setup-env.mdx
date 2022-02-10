@@ -1,0 +1,45 @@
+---
+sidebar_position: 1
+---
+
+# Setup System
+>This section regroups the guidelines that should be followed to setup your machine for local development of the ArchLan Documentation.
+
+- Install the `yarn` package on your machine:
+
+```bash
+# Arch-based
+$ sudo pacman -S yarn
+
+# Debian-based
+$ sudo apt install yarn
+```
+
+- Clone the ArchLan `documentation` repository from Github
+
+```bash
+$ git clone https://github.com/archlan/documentation.git
+```
+
+- Install the required dependencies for local development
+
+```bash
+$ cd /path/to/documentation
+$ yarn
+```
+
+- Start the local development server on your machine :
+
+```bash
+$ yarn run start
+```
+
+- Once you are done with all of your modifications, run the build command :
+
+```bash
+$ yarn build
+```
+
+:::note
+Before deploying to Github or making a pull request, ensure that the website built successfully and with no errors.
+:::

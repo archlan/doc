@@ -1,0 +1,40 @@
+---
+sidebar_position: 1
+---
+
+# Package repository structure
+>This section lists everything that I must take in consideration
+>when modifying/adding packages to the [ArchLan Packages repo](https://github.com/archlan/archlan-packages).
+
+## Structure
+
+```bash
+archlan-packages                      # Root of the repo
+└── x86_64                            # Supported architecture, contains the files
+   ├── archlan-packages.*             # Database files
+   ├── *.pkg.tar.zst                  # The actual package archive
+   └── *.pkg.tar.zst.sig              # Package signature
+```
+
+## Add/Update packages
+
+When adding packages to the repositories, follow these instructions:
+
+1. Delete the old database files
+
+1. Use this command to sign the package you wish to add
+:::note
+In this case, I use my own ArchLan PGP key for signing the package. When signing a package, make sure that the `*` is replaced by the package filename.
+:::
+```bash
+$ gpg --default-key archlan@protonmail.com --output *.pkg.tar.zst --detach-sig *.pkg.tar.zst
+gpg: using "archlan@protonmail.com" as default secret key for signing
+File '*.pkg.tar.zst' exists. Overwrite? (y/N) n
+Enter new filename: *.tar.zst.sig
+```
+
+1. Once the package(s) you wish to add have their `.sig` file, use this command
+```bash
+# This command regenerates the database entries, to make the repository usable
+$ repo-add -n -s -R archlan-packages.db.tar.gz *.pkg.tar.zst
+```

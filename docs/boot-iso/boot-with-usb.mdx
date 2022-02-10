@@ -1,0 +1,100 @@
+---
+sidebar_position: 1
+hide_table_of_contents: true
+---
+
+# Create A Bootable USB
+
+<!-- Tabs -->
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs>
+
+<TabItem value="dd" label="dd" default>
+
+## dd `Linux`
+
+:::danger
+Use this method only if you know what you are doing, since a simple typo mistake with `dd` can make irrecoverable damages to your disk drive.
+:::
+
+If you currently are on a Linux machine, you can use the command line utility `dd`. You can create both BIOS and UEFI bootbale USB sticks using this method. Follow the steps down below to make a bootable ArchLan USB with dd:
+
+- Run `sudo fdisk -l` to get the information about your USB drive and it's path. In this specific case, the path is `/dev/sdb`
+
+```bash
+$ sudo fdisk -l
+
+Disk /dev/sdb: 3,73 GiB, 4009754624 bytes, 7831552 sectors
+Disk model: DT 101 II
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0xa6af67e1
+```
+
+You can also find the path of your USB by running the command `lsblk`
+
+```bash
+$ lsblk
+
+NAME        MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
+sdb           8:16   1   3.7G  0 disk
+nvme0n1     259:0    0 119.2G  0 disk
+├─nvme0n1p1 259:1    0 115.2G  0 part /
+└─nvme0n1p2 259:2    0     4G  0 part
+...
+```
+
+- When you found the correct path, Run `dd` to flash the ISO to the USB.
+
+```bash
+$ sudo dd bs=4M if=path/to/archlan.iso of=/dev/sdX status=progress oflag=sync
+```
+
+- Before running the command, make sure to replace **/path/to/archlan.iso** with the ArchLan ISO path and also **/dev/sdX** with your USB device path.
+- When the process will be done, the ArchLan USB will be botbale for both BIOS and UEFI modes.
+
+</TabItem>
+
+<TabItem value="etcher" label="balenaEtcher">
+
+## Etcher `Linux`, `Mac`, `Windows`
+
+:::note
+[Etcher](https://www.balena.io/etcher/) can flash an OS image (ISO) to an SDCard or USB to make it bootable. This is the **easiest and simplest method** to make an ArchLan bootable USB for beginners.
+:::
+
+1. Install [Etcher](https://www.balena.io/etcher/) for your operating system.
+1. Open the balenaEtcher application and click **Select Image**. Select the ArchLan Linux ISO file.
+1. Choose your target USB stick. **CAUTION**, ensure you have selected the right one before proceeding to the next step.
+1. Select **Flash!** and wait for it to be done.
+1. The ArchLan USB will be bootable for both BIOS and UEFI modes.
+
+</TabItem>
+
+<TabItem value="other" label="Other">
+
+## Other Options `Linux`
+>The following methods copy the ISO file to the USB drive to make it bootable.
+
+- Using `cat` : run ;
+```bash
+$ sudo cat path/to/archlan.iso > /dev/sdX
+```
+- Using `cp` : run ;
+```bash
+$ sudo cp path/to/archlan.iso /dev/sdX
+```
+- Using `tee` : run ;
+```bash
+$ sudo tee < path/to/archlan.iso > /dev/sdx
+```
+
+Before running the command, make sure to replace **/path/to/archlan.iso** with the ArchLan ISO path and also **/dev/sdX** with your USB device path.
+
+</TabItem>
+
+</Tabs>
