@@ -64,8 +64,8 @@ module.exports = {
     },
     algolia: {
       // https://docusaurus.io/blog/2021/11/21/algolia-docsearch-migration
-      appId: '5ZO2QOFNGV',
-      apiKey: '26f57803dc9aaa6b5b37990866db24a6',
+      appId: 'BS9XDC853Y',
+      apiKey: 'efb31e4cfdca1c53d2c5848dd91d668d',
       indexName: 'archlan',
     },
     prism: {
