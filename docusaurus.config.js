@@ -5,12 +5,12 @@ const pages = require( './src/pages.config' )
 module.exports = {
   title: 'ArchLan',
   tagline: 'From school project to fully-featured and powerful Arch-based distro.',
-  url: 'https://archlan.github.io',
-  baseUrl: '/documentation/',
+  url: 'https://archlan.org',
+  baseUrl: '/doc/',
   onBrokenLinks: 'throw',
   favicon: 'img/logo-alt.svg',
   organizationName: 'archlan',
-  projectName: 'documentation',
+  projectName: 'doc',
   
   themeConfig: {
     hideableSidebar: true,
